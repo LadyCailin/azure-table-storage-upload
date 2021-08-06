@@ -1,6 +1,6 @@
 # GitHub Action to Upload Assets to Azure Blob Storage
 
-This action is designed to use the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) to insert a row of data into a table in yoru Azure Table Storage account.
+This action is designed to use the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) to insert a row of data into a table in your Azure Table Storage account. Mostly designed to be able to upload build meta information, though other use cases may be applicable.
 
 ## Usage
 
@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: LadyCailin/azure-table-storage-upload@v0.0.1
+      - uses: LadyCailin/azure-table-storage-upload@v1.0.0
         with:
           table_name: "MyTable"
           partition_key: "Partition Key"
