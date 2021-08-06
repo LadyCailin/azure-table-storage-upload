@@ -21,7 +21,7 @@ inputs:
     description: "The row key"
     required: true
   data:
-    description: "The data to insert. This should be in column="value" format."
+    description: "The data to insert. This should be in column=\"value\" format."
     required: true
   if_exists:
     description: "The strategy to use if the partition_key/row_key already exists in the table, one of fail, merge, or replace. Defaults to fail."
