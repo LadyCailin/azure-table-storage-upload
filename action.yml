@@ -1,0 +1,34 @@
+name: "Azure Table Storage Upload"
+author: "Cailin Smith <savannahcailin@gmail.com>"
+description: "Uploads values to Azure Table Storage"
+branding:
+  icon: "align-left"
+  color: "green"
+inputs:
+  connection_string:
+    description: "The connection string for the storage account. Used if value is set. Either connection_string or sas_token must be supplied"
+    required: false
+  sas_token:
+    description: "The shared access signature token for the storage account. Either connection_string or sas_token must be supplied"
+    required: false
+  table_name:
+    description: "The name of the table to insert into."
+    required: true
+  partition_key:
+    description: "The partition key"
+    required: true
+  row_key:
+    description: "The row key"
+    required: true
+  data:
+    description: "The data to insert. This should be in column="value" format."
+    required: true
+  if_exists:
+    description: "The strategy to use if the partition_key/row_key already exists in the table, one of fail, merge, or replace. Defaults to fail."
+    required: false
+  extra_args:
+    description: "Extra arguments that can be passed to `az storage entity insert`."
+    required: false
+runs:
+  using: "docker"
+  image: "Dockerfile"
