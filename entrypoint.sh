@@ -48,4 +48,4 @@ if ! [ -z "$INPUT_IF_EXISTS" ]; then
   IF_EXISTS=${INPUT_IF_EXISTS}
 fi
 
-az storage entity insert ${CONNECTION_METHOD} --table-name "${INPUT_TABLE_NAME}" --entity "PartitionKey=${INPUT_PARTITION_KEY} RowKey=${INPUT_ROW_KEY} ${INPUT_DATA}" --if-exists ${IF_EXISTS} ${EXTRA_ARGS}
+az storage entity insert ${CONNECTION_METHOD} --table-name "${INPUT_TABLE_NAME}" --entity PartitionKey=${INPUT_PARTITION_KEY} RowKey=${INPUT_ROW_KEY} ${INPUT_DATA} --if-exists ${IF_EXISTS} ${EXTRA_ARGS}
