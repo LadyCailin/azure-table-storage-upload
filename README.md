@@ -1,4 +1,4 @@
-# GitHub Action to Upload Assets to Azure Blob Storage
+# GitHub Action to Upload Data to Azure Table Storage
 
 This action is designed to use the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) to insert a row of data into a table in your Azure Table Storage account. Mostly designed to be able to upload build meta information, though other use cases may be applicable.
 
